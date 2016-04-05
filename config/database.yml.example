@@ -1,0 +1,26 @@
+# The IBM_DB Adapter requires the native Ruby driver (ibm_db)
+    # for IBM data servers (ibm_db.so).
+    # +config+ the hash passed as an initializer argument content:
+    # == mandatory parameters 
+    #   adapter:     'ibm_db'        // IBM_DB Adapter name
+    #   username:    'db2user'       // data server (database) user
+    #   password:    'secret'        // data server (database) password
+    #   database:    'DEVDB'         // remote database name (or catalog entry alias)
+    # == optional (highly recommended for data server auditing and monitoring purposes)
+    #   schema:      'rails123'      // name space qualifier
+    #   account:     'tester'        // OS account (client workstation)
+    #   app_user:    'test11'        // authenticated application user
+    #   application: 'rtests'        // application name
+    #   workstation: 'plato'         // client workstation name
+    # == remote TCP/IP connection (required when no local database catalog entry available)
+    #   host:        'Socrates'      // fully qualified hostname or IP address
+    #   port:        '50000'         // data server TCP/IP port number
+    # 
+    # When schema is not specified, the username value is used instead.
+development:
+  adapter:     'ibm_db'
+  username:    'yourusername'
+  password:    'yourpassword'
+  database:    'RAILS'
+  schema:      'DEV'
+  account:     'yourusername'

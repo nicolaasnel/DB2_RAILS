@@ -1,0 +1,6 @@
+<p id="notice"><%= notice %></p>
+  Name: <%= @project.name %><br />
+  Description : <%= @project.description %><br />
+  Open Source : <%= @project.opensource %><br />
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>
